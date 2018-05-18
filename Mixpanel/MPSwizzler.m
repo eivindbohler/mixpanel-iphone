@@ -92,7 +92,10 @@ static void mp_swizzledMethod_5(id self, SEL _cmd, id arg, id arg2, id arg3)
     }
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wstrict-prototypes"
 static void (*mp_swizzledMethods[MAX_ARGS - MIN_ARGS + 1])() = {mp_swizzledMethod_2, mp_swizzledMethod_3, mp_swizzledMethod_4, mp_swizzledMethod_5};
+#pragma clang diagnostic pop
 
 @implementation MPSwizzler
 
